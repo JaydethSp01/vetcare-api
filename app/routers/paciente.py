@@ -1,0 +1,5 @@
+from fastapi import APIRouter
+router = APIRouter(prefix='/pacientes', tags=['pacientes'])
+@router.get('/')
+async def list_pacientes():
+    return [{'id': 1, 'nombre': 'Juan Perez'}, {'id': 2, 'nombre': 'Ana Gomez'}]
